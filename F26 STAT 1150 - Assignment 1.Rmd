@@ -1,0 +1,213 @@
+---
+title: "STAT 1150 - Assignment 1"
+author: "Student Name (Student Number)"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+---
+
+# Instructions
+
+To properly view the assignment questions, knit this file to .PDF and view the output. In general, you should knit your assignment after each code chunk to avoid having to find any markdown related errors at the end.
+
+To answer the R-based questions, add code as needed into the R code chunks below the question. Where applicable, replace the "Delete this text; ..." with your own text response. Be sure when adding in text responses to never copy and paste symbols from outside of the document. Only use the symbols on your keyboard. **Do not** delete the question text, or modify any other part of the code except for the "author" in Line 3. 
+
+You will have a link in your email that takes you to the Crowdmark submission page. Once you have completed the assignment, knit it to .PDF and upload your output to Crowdmark. Make sure you set your Name and Student Number in the Author section of this document (Line 3). Do not alter the title or the date. Please note that if you do not submit a knit .PDF file, you will be given a grade of zero on the assignment.
+
+After you knit your assignment to PDF, check your code chunks. If your code at any point runs off the page, find the nearest comma, click to the right of it, and press Enter (or Return if you are on a Mac). This will force a break in the code so that it goes onto the next line. All of your code must be readable in the final submission.
+
+\textbf{It is good practice to knit the document after each new line of code. This will enable you to easily locate any errors reported by R.}
+
+All calculations and output must be visible in the final knit PDF.  Your work must be done using the same formatting, functions, and packages as in your labs and course notes, unless otherwise specified. You may speak to your classmates about ideas and what functions/arguments you may need to use but you may not directly show your code/output to your classmates. 
+
+The use of generative artificial intelligence (genAI) tools and apps is strictly prohibited for all assignments in this course. This includes ChatGPT, Claude and any other AI writing and coding assistants. Use of genAI in this course constitutes an act of academic dishonesty. This course policy is designed to promote your learning and intellectual development and to help you reach course learning outcomes. 
+
+The assignment is due by 11:59 p.m. on Thursday, October 22. For each day (or partial day) that the submission is late, there will be a 25% penalty applied after the assignment is graded. Note that even if your assignment is submitted a few minutes late, that counts as the next day.
+
+Deadline extensions are not granted for any reason--note that this applies to students registered with Student Accessibility Services as well. All assignments in this course are designed with integrated accommodations. The assignment is intended to take at most a few hours to complete, but you are given a full week. Thus, any accommodation related extensions are built-in to the original deadline. 
+
+If you have an issue that you can't resolve without someone looking at your work (e.g., you get an error when knitting your document and you can't figure out what the error is), please see a TA in the Help Centre in 106-110 Allen.
+
+# Questions [28 marks]
+
+## Question 1 [17 marks]
+
+The `agridat` package provides an extensive collection of datasets from various agricultural experiments. Run the code chunk below to install (`install.packages("agridat")` and load (`library(agridat)`) the package. 
+
+```{r}
+install.packages("agridat")
+library(agridat)
+```
+
+We will be using the `eden.potato` dataset, which contains potato yield data evaluated under different combinations of potash and nitrogen fertilizer applications.
+
+### Part (a) [2 marks]
+
+One variable in the `eden.potato` dataset is `yield`, which contains measurements for the yield of potatoes for each treatment, measured in lbs. Make a horizontal quantile boxplot for the `yield` variable. Give it a title of "Potato Yield", an x-axis label of "Yield (lbs)" and a colour of "tan".
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (b) [1 mark]
+
+Based on the boxplot in Part (a), what shape is the distribution of the `yield` variable?
+
+*Delete this text; type your answer here. Do not copy and paste any symbols from outside sources, and do not remove the asterisks.*
+
+### Part (c) [2 marks]
+
+Create a histogram of the `yield` variable with a main title of "Potato Yield", an x-axis label of "Yield (lbs)", a y-axis label of "Frequency" and a colour of "brown"
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+
+
+### Part (d) [1 mark]
+
+Find the five-number summary for the `yield` variable.
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (e) [1 mark]
+
+Use `R` as a calculator to find the lower and upper fence for the `yield` variable.
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (f) [1 mark]
+
+Based on your solutions to Parts (d) and (e), are there any yield measurements in the dataset that are considered outliers? Why or why not?
+
+*Delete this text; type your answer here. Do not copy and paste any symbols from outside sources, and do not remove the asterisks.*
+
+
+### Part (g) [2 marks]
+
+To verify your answer in Part (f), make a horizontal outlier boxplot for the `yield` variable. Give it a title of "Potato Yield", an x-axis label of "Yield (lbs)" and a colour of "tan".
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (h) [1 mark]
+
+Based on the outlier boxplot you created in Part (g), what is the approximate shape of the distribution of the `yield` variable?
+
+*Delete this text; type your answer here. Do not copy and paste any symbols from outside sources, and do not remove the asterisks.*
+
+### Part (i) [1 mark]
+
+Do you expect the mean of the `yield` variable to be greater than, less than, or approximately equal to the median? Why?
+
+*Delete this text; type your answer here. Do not copy and paste any symbols from outside sources, and do not remove the asterisks.*
+
+### Part (j) [1 mark]
+
+Verify your answer to Part (i) by calculating the mean and median of the `yield` variable.
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+
+
+### Part (k) [1 mark]
+
+Calculate the standard deviation and variance of the `yield` variable.
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (l) [1 mark]
+
+Would it be more appropriate to summarize the distribution of the `yield` variable using the mean and standard deviation, or the five-number summary? Why?
+
+*Delete this text; type your answer here. Do not copy and paste any symbols from outside sources, and do not remove the asterisks.*
+
+### Part (m) [2 marks]
+
+The variable `ptype` in the `eden.potato` dataset records the type of potash fertilizer used. There are four different types: `N` means no potash fertilizer was used, `S` means sulfate, `M` means muriate and `P` means potash manure salts. Create side-by-side vertical quantile boxplots of the yields for the different potash fertilizer types. Label the x-axis as "Potash Fertilizer Type" and the y-axis as "Potato Yield (lbs).
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+## Question 2 [9 marks]
+
+Suppose that in general, potato yields are known to follow a normal distribution with a mean of 400 lbs and a standard deviation of 80 lbs.
+
+### Part (a) [1 mark]
+
+What proportion of potato yields are greater than 415 lbs?
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (b) [1 mark]
+
+What is the 17th percentile for potato yields?
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (c) [1.5 marks]
+
+What is the interquartile range for potato yields?
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (d) [1 mark]
+
+`R` can also be used to calculate probabilities for a variable that follows a uniform distribution.
+
+Suppose a variable $X$ follows a uniform distribution on the interval from `a` to `b`.  
+
+To find $P(X < x)$, we use the command `punif(x, a, b)`. To find the $p^{th}$ percentile of the distribution of $X$ (i.e., the value $x$ such that $P(X < x) = p$), we use the command `qunif(p, a, b)`.
+
+Yields for carrots are known to follow a uniform distribution on the interval from 300 lbs to 415 lbs. 
+
+Calculate the proportion of carrot yields that are less than 310 lbs.
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (e) [1 mark]
+
+Calculate the proportion of carrot yields that are greater than 350 lbs.
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+### Part (f) [1 mark]
+
+42\% of carrot yields are above how many lbs?
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+
+### Part (g) [2.5 marks]
+
+Determine which crop (potatoes or carrots) is more likely to produce a yield between 375 lbs and 405 lbs. Use the code chunk below to perform any necessary calculations, then type your answer between the asterisks below.
+
+```{r}
+#Insert code here; delete this line (including the # symbol) when done
+```
+
+*Delete this text; type your answer here. Do not copy and paste any symbols from outside sources, and do not remove the asterisks.*
+
